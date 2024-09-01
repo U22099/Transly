@@ -1,6 +1,8 @@
+"use client"
+
 import {motion} from 'framer-motion';
 
-export default function Home() {
+export default function Welcome() {
   return (
     <motion.main
     initial={{opacity: 0, y: -100}}
