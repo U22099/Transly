@@ -2,7 +2,6 @@ type LangType = {
     [index: string]: string
 }
 
-
 const language: LangType = {
     "am-ET": "Amharic",
     "ar-SA": "Arabic",
@@ -102,5 +101,6 @@ const language: LangType = {
     "yi-YD": "Yiddish",
     "zu-ZA": "Zulu"
 }
+const languageArray: [string, string][] = Array.from(language).sort((a,b) => a[1].localeCompare(b[1]));
 
-export default language
+export default languageArray
