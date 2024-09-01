@@ -24,8 +24,6 @@ const language: LangType = {
   "de-DE": "German",
   "dv-MV": "Maldivian",
   "el-GR": "Greek",
-  "en-GB": "English",
-  "es-ES": "Spanish",
   "et-EE": "Estonian",
   "eu-ES": "Basque",
   "fa-IR": "Persian",
@@ -102,6 +100,8 @@ const language: LangType = {
   "xh-ZA": "Xhosa",
   "yi-YD": "Yiddish",
   "zu-ZA": "Zulu",
+  "en-GB": "English",
+  "es-Es": "Spanish",
 };
 const languageArray: [string, string][] = Object.entries(language).sort(
   (a, b) => a[1].localeCompare(b[1])
