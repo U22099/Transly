@@ -12,7 +12,7 @@ const Home = () => {
             />
             <div>
                 <select id="selectA">
-                    <option value=""><option>
+                    <option value=""></option>
                 </select>
             </div>
         </div>
@@ -23,7 +23,7 @@ const Home = () => {
             />
             <div>
                 <select id="selectB">
-                    <option value=""><option>
+                    <option value=""></option>
                 </select>
             </div>
         </div>
