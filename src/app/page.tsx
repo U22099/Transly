@@ -1,9 +1,14 @@
 "use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center items-center gap-4 text-center bg-slate-100 dark:bg-gray-900 h-screen">
+    <motion.main
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="flex flex-col justify-center items-center gap-4 text-center bg-slate-100 dark:bg-gray-900 h-screen"
+    >
       <h1 className="text-5xl md:text-7xl font-mono dark:text-white text-bold">
         Welcome to Transly
       </h1>
@@ -17,6 +22,6 @@ export default function Home() {
       >
         Enter
       </Link>
-    </main>
+    </motion.main>
   );
 }
