@@ -101,6 +101,7 @@ const language: LangType = {
     "yi-YD": "Yiddish",
     "zu-ZA": "Zulu"
 }
-const languageArray: [string, string][] = Array.from(language).sort((a,b) => a[1].localeCompare(b[1]));
+const languageArray: [string, string][] = Object.entries(language).sort((a,b) => a[1].localeCompare(b[1]));
+console.log(languageArray)
 
 export default languageArray
