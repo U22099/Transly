@@ -95,7 +95,7 @@ const Home = () => {
             <select
               id="selectA"
               onChange={(e) => setLangAB({ ...langAB, A: e.target.value })}
-              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[30vw] md:max-w-[20vw]"
+              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[40vw] md:max-w-[20vw]"
               defaultValue="en-GB"
             >
               {languageArray.map((lang, index) => {
@@ -139,7 +139,7 @@ const Home = () => {
             <select
               id="selectB"
               onChange={(e) => setLangAB({ ...langAB, B: e.target.value })}
-              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[30vw] md:max-w-[20vw]"
+              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[0vw] md:max-w-[20vw]"
               defaultValue="es-Es"
             >
               {languageArray.map((lang, index) => {
