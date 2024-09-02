@@ -71,8 +71,8 @@ const Home = () => {
       animate={{  y: 0 }}
       transition={{duration: 1.5}}
       staggerChildren={0.5}
-      className="flex md:flex-row flex-col gap-4 md:gap-8 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
-        <div className="flex flex-col gap-4 h-fit w-fit p-2 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
+      className="flex md:flex-row flex-col gap-4 md:gap-8 md:bg-slate-100 md:dark:bg-gray-900 md:shadow-lg rounded">
+        <div className="flex flex-col gap-4 p-2 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
         <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-2 md:p-4 mx-auto">
         <textarea
             className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
@@ -112,7 +112,7 @@ const Home = () => {
           className="text-[2.4em] fill-black dark:fill- rotate-90 md:rotate-0 mx-auto my-[-10px] md:my-auto cursor-pointer fill-black dark:fill-white"
           onClick={switchValue}
         />
-        <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
+        <div className="flex flex-col gap-4 p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
           <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-2 md:p-4 mx-auto">
             <textarea
               className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
@@ -158,4 +158,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;
