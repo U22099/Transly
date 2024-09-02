@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <motion.main
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, height: 0vh}}
+      animate={{ opacity: 1, height: 100vh }}
+      transition={{duration: 1.5}}
       className="flex flex-col justify-center items-center gap-4 text-center bg-slate-100 dark:bg-gray-900 h-screen"
     >
       <h1 className="text-5xl md:text-7xl font-mono dark:text-white text-bold">

@@ -9,6 +9,7 @@ import languageArray from "../../lib/language";
 import translate from "../../lib/translate";
 import { speak } from "../../lib/translate";
 import { useState, useEffect } from "react";
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const [langAB, setLangAB] = useState({ A: "en-GB", B: "es-ES" });
@@ -56,11 +57,21 @@ const Home = () => {
   }, [input, langAB]);
 
   return (
-    <main className="flex flex-col w-screen min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-10">
+    <motion.main
+    initial={{ opacity: 0,}}
+      animate={{ opacity: 1'}}
+      transition={{duration: 1}}
+      staggerChildren={0.5}
+     className="flex flex-col w-screen min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-10">
       <h1 className="font-mono font-bold text-[2em] md:text-[3em] mb-3 mt-5 rounded bg-gray-200 p-4 dark:bg-gray-800 text-black dark:text-white">
         Transly
       </h1>
-      <div className="flex md:flex-row flex-col gap-4 md:gap-8 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
+      <motion.div 
+      initial={{ y: 300}}
+      animate={{  y: 0 }}
+      transition={{duration: 1.5}}
+      staggerChildren={0.5}
+      className="flex md:flex-row flex-col gap-4 md:gap-8 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
         <div className="flex flex-col gap-4 h-fit w-fit p-2 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
         <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-2 md:p-4 mx-auto">
         <textarea
@@ -84,7 +95,7 @@ const Home = () => {
             <select
               id="selectA"
               onChange={(e) => setLangAB({ ...langAB, A: e.target.value })}
-              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono"
+              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[30vw] md:max-w-[20vw]"
               defaultValue="en-GB"
             >
               {languageArray.map((lang, index) => {
@@ -128,7 +139,7 @@ const Home = () => {
             <select
               id="selectB"
               onChange={(e) => setLangAB({ ...langAB, B: e.target.value })}
-              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono"
+              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[30vw] md:max-w-[20vw]"
               defaultValue="es-Es"
             >
               {languageArray.map((lang, index) => {
@@ -142,8 +153,8 @@ const Home = () => {
           </div>
         </div>
         {error&&<p className="text-red-600 font-mono mt-2">{error}</p>}
-      </div>
-    </main>
+      </motion.div>
+    </motion.main>
   );
 };
 
