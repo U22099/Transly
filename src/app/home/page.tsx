@@ -128,7 +128,7 @@ const Home = () => {
             </select>
           </div>
         </div>
-        {error&<p className="text-red-600 font-mono mt-2">{error}</p>}
+        {error&&<p className="text-red-600 font-mono mt-2">{error}</p>}
       </div>
     </main>
   );
