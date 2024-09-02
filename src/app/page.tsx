@@ -15,7 +15,7 @@ export default function Home() {
       <Link
        prefetch={false}
         href="/home"
-        className="animate-bounce bg-none border-black border-2 p-5 px-16 rounded-full text-bold font-mono dark:text-black dark:bg-white dark:border-none mt-5 text-2xl md:text-4xl hover:transform hover:animate-none hover:scale-[1.02] transition-transform duration-1000"
+        className="animate-bounce bg-none border-black border-2 p-5 px-16 rounded-full text-bold font-mono dark:text-black dark:bg-white dark:border-none mt-5 text-2xl md:text-4xl hover:transform hover:animate-none hover:scale-[1.02] active:transform active:animate-none active:scale-[0.8] transition-transform duration-1000"
       >
         Enter
       </Link>

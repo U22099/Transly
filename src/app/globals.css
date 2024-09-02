@@ -6,7 +6,7 @@
 
 
 .anim{
-  animation: introAnim 1.5s linear
+  animation: introAnim 1s linear
 }
 @keyframes introAnim{
   from {
