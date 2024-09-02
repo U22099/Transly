@@ -13,7 +13,7 @@ export default function Home() {
         Welcome to Transly
       </h1>
       <p className="font-mono dark:text-white max-w-3/4">
-        A language translator with support for over 50+ languages and voice
+        A language translator with support for over 150+ languages and voice
         feature
       </p>
       <Link
