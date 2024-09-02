@@ -38,6 +38,7 @@ const Home = () => {
       },
       (err) => {
         setCopied(false);
+        console.log(err)
       }
     );
   }

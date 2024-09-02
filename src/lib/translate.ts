@@ -11,10 +11,15 @@ async function translate(
     cache: "no-store",
   });
   const res = await response.json();
-  console.log(res);
   const result = res.responseData.translatedText;
   if (result) {
     setTranslation(result);
+    if(result?.toLowerCase() === input.toLowerCase()){
+      setTranslation(res.matches[0].translated || result);
+    }
+    if(res.responseStatus === 403){
+   setTranslation("Invalid language input");
+  } 
   } else {
     setTranslation("No translation found");
   }
