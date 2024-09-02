@@ -51,7 +51,7 @@ const Home = () => {
       <div className="flex md:flex-row flex-col gap-8 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
         <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
           <textarea
-            className="md:w-[40vw] w-[70vw] h-[200px] rounded resize-none p-2 text-[1.2em] font-mono"
+            className="md:w-[40vw] w-[70vw] h-[200px] rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
             maxLength={5000}
             id="input"
             onChange={(e) => setInput(e.target.value)}
@@ -84,9 +84,9 @@ const Home = () => {
           onClick={switchValue}
         />
         <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
-          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-4">
+          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-4 mx-auto">
             <textarea
-              className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono"
+              className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
               id="output"
               value={translation}
               readOnly
