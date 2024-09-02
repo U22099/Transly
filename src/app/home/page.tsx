@@ -84,7 +84,7 @@ const Home = () => {
           </div>
         </div>
         <GoArrowSwitch
-          className="text-[2.4em] fill-black dark:fill- rotate-90 md:rotate-0 mx-auto my-[-10px] md:my-auto cursor-pointer text-black dark:text-white"
+          className="text-[2.4em] fill-black dark:fill- rotate-90 md:rotate-0 mx-auto my-[-10px] md:my-auto cursor-pointer fill-black dark:fill-white"
           onClick={switchValue}
         />
         <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
