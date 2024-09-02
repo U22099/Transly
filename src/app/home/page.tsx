@@ -51,8 +51,8 @@ const Home = () => {
       <h1 className="font-mono font-bold text-[2em] md:text-[3em] mb-3 mt-5 rounded bg-gray-200 p-4">
         Transly
       </h1>
-      <div className="flex md:flex-row flex-col gap-4 md:gap-8 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
-        <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
+      <div className="flex md:flex-row flex-col gap-4 md:gap-8 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
+        <div className="flex flex-col gap-4 h-fit w-fit p-2 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
           <textarea
             className="md:w-[40vw] w-[70vw] h-[200px] rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
             maxLength={5000}
@@ -86,8 +86,8 @@ const Home = () => {
           className="text-[2.4em] fill-black dark:fill- rotate-90 md:rotate-0 mx-auto my-[-10px] md:my-auto cursor-pointer"
           onClick={switchValue}
         />
-        <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
-          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-4 mx-auto">
+        <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
+          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-2 md:p-4 mx-auto">
             <textarea
               className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
               id="output"
