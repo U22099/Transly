@@ -10,7 +10,7 @@ async function translate(
   const response = await fetch(url, {
     cache: "no-store",
   });
-  const res = awa---it response.json();
+  const res = await response.json();
   const result = res.responseData.translatedText;
   if (result) {
     setTranslation(result);
