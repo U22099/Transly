@@ -48,7 +48,7 @@ const Home = () => {
       <h1 className="font-mono font-bold text-[2em] md:text-[3em] mb-3 mt-5 rounded bg-gray-200 p-4">
         Transly
       </h1>
-      <div className="flex md:flex-row flex-col gap-8 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
+      <div className="flex md:flex-row flex-col gap-4 md:gap-8 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
         <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
           <textarea
             className="md:w-[40vw] w-[70vw] h-[200px] rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
