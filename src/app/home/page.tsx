@@ -4,6 +4,7 @@ import { HiSpeakerWave } from "react-icons/hi2";
 import { GoArrowSwitch } from "react-icons/go";
 import { IoCopy } from "react-icons/io5";
 import { IoMdDoneAll } from "react-icons/io";
+import { FaArrowDown } from "react-icons/fa";
 import languageArray from "../../lib/language";
 import translate from "../../lib/translate";
 import { speak } from "../../lib/translate";
@@ -42,6 +43,11 @@ const Home = () => {
       }
     );
   }
+  async function trans(){
+    await translate(langAB.A, langAB.B, input, setTranslation);
+    const output = document.getElementById("output") as HTMLTextAreaElement;
+    output.scrollIntoView({behavior: 'smooth'})
+  }
   useEffect(() => {
     if (input) {
       setTranslation("Translating...");
@@ -56,12 +62,18 @@ const Home = () => {
       </h1>
       <div className="flex md:flex-row flex-col gap-4 md:gap-8 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
         <div className="flex flex-col gap-4 h-fit w-fit p-2 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
-          <textarea
-            className="md:w-[40vw] w-[70vw] h-[200px] rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
+        <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-2 md:p-4 mx-auto">
+        <textarea
+            className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
             maxLength={5000}
             id="input"
             onChange={(e) => setInput(e.target.value)}
           />
+              <FaArrowDown
+                className="z-10 text-[1.5em] md:text-[2em] cursor-pointer"
+                onClick={async ()=> await trans()}
+              />
+          </div>
           <div className="flex justify-between px-5 gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 rounded w-full py-2">
             <span className="bg-gray-200 dark:bg-gray-800 rounded-full p-3">
               <HiSpeakerWave
