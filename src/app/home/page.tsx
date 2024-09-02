@@ -23,6 +23,7 @@ const Home = () => {
     [selectA.value, selectB.value] = [selectB.value, selectA.value];
     setLangAB({ A: langAB.B, B: langAB.A });
     input.value = "";
+    setInput("");
     setTranslation("")
   }
   function copyToClipBoard() {
