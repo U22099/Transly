@@ -13,6 +13,7 @@ const Home = () => {
   const [langAB, setLangAB] = useState({ A: "en-GB", B: "es-ES" });
   const [translation, setTranslation] = useState("");
   const [input, setInput] = useState("");
+  const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
 
   function switchValue() {
@@ -64,7 +65,7 @@ const Home = () => {
             <span className="bg-gray-200 dark:bg-gray-800 rounded-full p-3">
               <HiSpeakerWave
                 className="text-[1.2em] fill-black dark:fill-white cursor-pointer"
-                onClick={() => speak(input, langAB.A)}
+                onClick={() => speak(input, langAB.A, setError)}
               />
             </span>
             <select
@@ -108,7 +109,7 @@ const Home = () => {
             <span className="bg-gray-200 dark:bg-gray-800 rounded-full p-3">
               <HiSpeakerWave
                 className="text-[1.2em] fill-black dark:fill-white cursor-pointer"
-                onClick={() => speak(translation, langAB.B)}
+                onClick={() => speak(translation, langAB.B, setError)}
               />
             </span>
             <select
@@ -127,6 +128,7 @@ const Home = () => {
             </select>
           </div>
         </div>
+        {error&<p className="text-red-600 font-mono mt-2">{error}</p>}
       </div>
     </main>
   );

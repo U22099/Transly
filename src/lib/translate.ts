@@ -1,7 +1,5 @@
 "use client";
 
-import axios from "axios";
-
 async function translate(
   langA: string,
   langB: string,
@@ -22,12 +20,17 @@ async function translate(
   }
 }
 
-export function speak(text: string, lang: string) {
-  const utterance = new SpeechSynthesisUtterance();
-  utterance.text = text;
-  utterance.lang = lang;
-  const speech = window.speechSynthesis || speechSynthesis;
-  speech.speak(utterance);
+export function speak(text: string, lang: string, setError: (arg0: string) => void) {
+  try{
+    const utterance = new SpeechSynthesisUtterance();
+    utterance.text = text;
+    utterance.lang = lang;
+    const speech = window.speechSynthesis || speechSynthesis;
+    speech.speak(utterance);
+  } catch(e) {
+    console.log(e)
+    setError("Voice feature not supported in your device")
+  }
 }
 
 export default translate;
