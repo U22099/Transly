@@ -6,11 +6,11 @@ async function translate(
   input: string,
   setTranslation: (arg0: string) => void
 ) {
-  const url = `https://api.mymemory.translated.net/get?q=${input}&langpair=${langA}|${langB}`;
+  const url = `https://api.mymemory.translated.net/get?q=${input}&langpair=${langA}|${langB}&de=`;
   const response = await fetch(url, {
     cache: "no-store",
   });
-  const res = await response.json();
+  const res = awa---it response.json();
   const result = res.responseData.translatedText;
   if (result) {
     setTranslation(result);
