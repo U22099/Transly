@@ -25,7 +25,7 @@ const Home = () => {
     setLangAB({ A: langAB.B, B: langAB.A });
     input.value = "";
     setInput("");
-    setTranslation("")
+    setTranslation("");
   }
   function copyToClipBoard() {
     const output = document.getElementById("output") as HTMLTextAreaElement;

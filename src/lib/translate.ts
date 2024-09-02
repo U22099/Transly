@@ -28,8 +28,11 @@ export function speak(text: string, lang: string, setError: (arg0: string) => vo
     const speech = window.speechSynthesis || speechSynthesis;
     speech.speak(utterance);
   } catch(e) {
-    console.log(e)
+    console.log(e);
     setError("Voice feature not supported in your device")
+    setTimeout(() => {
+    setError("Voice feature not supported in your device")
+    }, 3000);
   }
 }
 
