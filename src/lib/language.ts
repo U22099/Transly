@@ -106,6 +106,5 @@ const language: LangType = {
 const languageArray: [string, string][] = Object.entries(language).sort(
   (a, b) => a[1].localeCompare(b[1])
 );
-console.log(languageArray);
 
 export default languageArray;

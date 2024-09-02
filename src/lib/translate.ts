@@ -1,4 +1,5 @@
 "use client";
+
 import axios from "axios";
 
 async function translate(
@@ -8,20 +9,16 @@ async function translate(
   setTranslation: (arg0: string) => void
 ) {
   const url = `https://api.mymemory.translated.net/get?q=${input}&langpair=${langA}|${langB}`;
-  const response = await axios.get(url);
-  const result = response.data.responseData.translatedText;
-  if (!(result?.toLowerCase() === input.toLowerCase())) {
+  const response = await fetch(url, {
+    cache: "no-store",
+  });
+  const res = await response.json();
+  console.log(res);
+  const result = res.responseData.translatedText;
+  if (result) {
     setTranslation(result);
   } else {
-    const result2 = response.data.matches.filter(
-      (x: { [index: string]: string }) =>
-        x.translation.toLowerCase() !== input.toLowerCase()
-    )[0];
-    if (result2) {
-      setTranslation(result2);
-    } else {
-      setTranslation("No translation found");
-    }
+    setTranslation("No translation found");
   }
 }
 

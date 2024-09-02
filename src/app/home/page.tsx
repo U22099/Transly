@@ -20,6 +20,7 @@ const Home = () => {
     const selectB = document.getElementById("selectB") as HTMLSelectElement;
 
     [selectA.value, selectB.value] = [selectB.value, selectA.value];
+    setLangAB({ A: langAB.B, B: langAB.A });
   }
   function copyToClipBoard() {
     const output = document.getElementById("output") as HTMLTextAreaElement;
@@ -37,12 +38,13 @@ const Home = () => {
   }
   useEffect(() => {
     if (input) {
+      setTranslation("Translating...");
       translate(langAB.A, langAB.B, input, setTranslation);
     }
   }, [input, langAB]);
 
   return (
-    <div className="flex min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-20">
+    <main className="flex min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-20">
       <div className="flex md:flex-row flex-col gap-8 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
         <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
           <textarea
@@ -62,15 +64,9 @@ const Home = () => {
               id="selectA"
               onChange={(e) => setLangAB({ ...langAB, A: e.target.value })}
               className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono"
+              defaultValue="en-GB"
             >
               {languageArray.map((lang, index) => {
-                if (lang[1] === "English") {
-                  return (
-                    <option value={lang[0]} key={index} selected>
-                      {lang[1]}
-                    </option>
-                  );
-                }
                 return (
                   <option value={lang[0]} key={index}>
                     {lang[1]}
@@ -90,6 +86,7 @@ const Home = () => {
               className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono"
               id="output"
               value={translation}
+              readOnly
             />
             {!copied ? (
               <IoCopy
@@ -109,17 +106,11 @@ const Home = () => {
             </span>
             <select
               id="selectB"
-              onChange={(e) => setLangAB({ ...langAB, A: e.target.value })}
+              onChange={(e) => setLangAB({ ...langAB, B: e.target.value })}
               className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono"
+              defaultValue="es-Es"
             >
               {languageArray.map((lang, index) => {
-                if (lang[1] === "Spanish") {
-                  return (
-                    <option value={lang[0]} key={index} selected>
-                      {lang[1]}
-                    </option>
-                  );
-                }
                 return (
                   <option value={lang[0]} key={index}>
                     {lang[1]}
@@ -130,7 +121,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
