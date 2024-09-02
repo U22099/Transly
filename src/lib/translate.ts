@@ -6,7 +6,7 @@ async function translate(
   input: string,
   setTranslation: (arg0: string) => void
 ) {
-  const url = `https://api.mymemory.translated.net/get?q=${input}&langpair=${langA}|${langB}&de=`;
+  const url = `https://api.mymemory.translated.net/get?q=${input}&langpair=${langA}|${langB}&de=nifemiolaniyi4@gmail.com`;
   const response = await fetch(url, {
     cache: "no-store",
   });
