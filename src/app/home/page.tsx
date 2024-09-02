@@ -44,7 +44,10 @@ const Home = () => {
   }, [input, langAB]);
 
   return (
-    <main className="flex min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-20">
+    <main className="flex flex-col min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-10">
+      <h1 className="font-mono font-bold text-[2em] md:text-[3em] mb-3 mt-5 rounded bg-gray-200 p-4">
+        Transly
+      </h1>
       <div className="flex md:flex-row flex-col gap-8 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
         <div className="flex flex-col gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 shadow-lg rounded">
           <textarea
