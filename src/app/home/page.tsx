@@ -18,9 +18,12 @@ const Home = () => {
   function switchValue() {
     const selectA = document.getElementById("selectA") as HTMLSelectElement;
     const selectB = document.getElementById("selectB") as HTMLSelectElement;
+    const input = document.getElementById("input") as HTMLTextAreaElement;
 
     [selectA.value, selectB.value] = [selectB.value, selectA.value];
     setLangAB({ A: langAB.B, B: langAB.A });
+    input.value = "";
+    setTranslation("")
   }
   function copyToClipBoard() {
     const output = document.getElementById("output") as HTMLTextAreaElement;
