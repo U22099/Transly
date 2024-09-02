@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main
-      className="flex flex-col justify-center items-center gap-4 text-center bg-slate-100 dark:bg-gray-900 h-screen"
+      className="anim flex flex-col justify-center items-center gap-4 text-center bg-slate-100 dark:bg-gray-900 h-screen"
     >
       <h1 className="text-5xl md:text-7xl font-mono dark:text-white text-bold">
         Welcome to Transly

@@ -4,7 +4,17 @@
 
 @tailwind utilities;
 
-:root{
-    --bg-color-light: #fff;
-    --bg-color-dark: #000;
+
+.anim{
+  animation: introAnim 1.5s linear
+}
+@keyframes introAnim{
+  from {
+    opacity: 0;
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    height: 100vh;
+  }
 }

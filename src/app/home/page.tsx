@@ -57,14 +57,14 @@ const Home = () => {
 
   return (
     <main
-     className="flex flex-col w-screen min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-10">
+     className="anim flex flex-col w-screen min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-10">
       <h1 className="font-mono font-bold text-[2em] md:text-[3em] mb-3 mt-5 rounded bg-gray-200 p-4 dark:bg-gray-800 text-black dark:text-white">
         Transly
       </h1>
       <div 
       className="flex md:flex-row flex-col gap-4 md:gap-8 md:bg-slate-100 md:dark:bg-gray-900 md:shadow-lg rounded">
         <div className="flex flex-col gap-4 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
-        <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative mx-auto">
+        <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative mx-auto p-2 md:p-4">
         <textarea
             className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
             maxLength={5000}
@@ -86,7 +86,7 @@ const Home = () => {
             <select
               id="selectA"
               onChange={(e) => setLangAB({ ...langAB, A: e.target.value })}
-              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[40vw] md:max-w-[20vw]"
+              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[40vw] md:max-w-[20vw] text-black dark:text-white"
               defaultValue="en-GB"
             >
               {languageArray.map((lang, index) => {
@@ -104,7 +104,7 @@ const Home = () => {
           onClick={switchValue}
         />
         <div className="flex flex-col gap-4 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
-          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative mx-auto">
+          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative mx-auto p-2 md:p-4">
             <textarea
               className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
               id="output"
@@ -130,7 +130,7 @@ const Home = () => {
             <select
               id="selectB"
               onChange={(e) => setLangAB({ ...langAB, B: e.target.value })}
-              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono max-w-[0vw] md:max-w-[20vw]"
+              className="bg-gray-200 dark:bg-gray-800 rounded p-3 outline-none focus:outline-none focus:border-none cursor-pointer font-mono text-black dark:text-white max-w-[40vw] md:max-w-[20vw]"
               defaultValue="es-Es"
             >
               {languageArray.map((lang, index) => {
