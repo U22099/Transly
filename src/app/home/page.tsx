@@ -72,8 +72,8 @@ const Home = () => {
       transition={{duration: 1.5}}
       staggerChildren={0.5}
       className="flex md:flex-row flex-col gap-4 md:gap-8 md:bg-slate-100 md:dark:bg-gray-900 md:shadow-lg rounded">
-        <div className="flex flex-col gap-4 p-2 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
-        <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-2 md:p-4 mx-auto">
+        <div className="flex flex-col gap-4 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
+        <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative mx-auto">
         <textarea
             className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
             maxLength={5000}
@@ -85,7 +85,7 @@ const Home = () => {
                 onClick={async ()=> await trans()}
               />
           </div>
-          <div className="flex justify-between px-5 gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 rounded w-full py-2">
+          <div className="flex justify-between px-2 md:px-5 gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 rounded w-full py-2">
             <span className="bg-gray-200 dark:bg-gray-800 rounded-full p-3">
               <HiSpeakerWave
                 className="text-[1.2em] fill-black dark:fill-white cursor-pointer"
@@ -112,8 +112,8 @@ const Home = () => {
           className="text-[2.4em] fill-black dark:fill- rotate-90 md:rotate-0 mx-auto my-[-10px] md:my-auto cursor-pointer fill-black dark:fill-white"
           onClick={switchValue}
         />
-        <div className="flex flex-col gap-4 p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
-          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative p-2 md:p-4 mx-auto">
+        <div className="flex flex-col gap-4 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
+          <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative mx-auto">
             <textarea
               className="md:w-[40vw] w-[70vw] h-[200px] absolute top-0 left-0 bottom-0 right-0 rounded resize-none p-2 text-[1.2em] font-mono mx-auto"
               id="output"
@@ -129,7 +129,7 @@ const Home = () => {
               <IoMdDoneAll className="z-10 text-[1.5em] md:text-[2em] cursor-pointer" />
             )}
           </div>
-          <div className="flex justify-between px-5 gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 rounded w-full py-2">
+          <div className="flex justify-between px-2 md:px-5 gap-4 h-fit w-fit p-3 bg-slate-100 dark:bg-gray-900 rounded w-full py-2">
             <span className="bg-gray-200 dark:bg-gray-800 rounded-full p-3">
               <HiSpeakerWave
                 className="text-[1.2em] fill-black dark:fill-white cursor-pointer"
