@@ -1,12 +1,11 @@
-"use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <motion.main
-      initial={{ opacity: 0, height: 0vh}}
-      animate={{ opacity: 1, height: 100vh }}
+      initial={{ opacity: 0, height: 0}}
+      animate={{ opacity: 1, height: '100vh' }}
       transition={{duration: 1.5}}
       className="flex flex-col justify-center items-center gap-4 text-center bg-slate-100 dark:bg-gray-900 h-screen"
     >

@@ -9,7 +9,6 @@ import languageArray from "../../lib/language";
 import translate from "../../lib/translate";
 import { speak } from "../../lib/translate";
 import { useState, useEffect } from "react";
-import { motion } from 'framer-motion';
 
 const Home = () => {
   const [langAB, setLangAB] = useState({ A: "en-GB", B: "es-ES" });
@@ -57,20 +56,12 @@ const Home = () => {
   }, [input, langAB]);
 
   return (
-    <motion.main
-    initial={{ opacity: 0,}}
-      animate={{ opacity: 1'}}
-      transition={{duration: 1}}
-      staggerChildren={0.5}
+    <main
      className="flex flex-col w-screen min-h-screen bg-slate-100 dark:bg-gray-900 justify-center items-center py-10">
       <h1 className="font-mono font-bold text-[2em] md:text-[3em] mb-3 mt-5 rounded bg-gray-200 p-4 dark:bg-gray-800 text-black dark:text-white">
         Transly
       </h1>
-      <motion.div 
-      initial={{ y: 300}}
-      animate={{  y: 0 }}
-      transition={{duration: 1.5}}
-      staggerChildren={0.5}
+      <div 
       className="flex md:flex-row flex-col gap-4 md:gap-8 md:bg-slate-100 md:dark:bg-gray-900 md:shadow-lg rounded">
         <div className="flex flex-col gap-4 md:p-3 bg-slate-100 dark:bg-gray-900 md:shadow-lg rounded">
         <div className="md:w-[40vw] w-[70vw] h-[200px] flex justify-end items-end relative mx-auto">
@@ -153,8 +144,8 @@ const Home = () => {
           </div>
         </div>
         {error&&<p className="text-red-600 font-mono mt-2">{error}</p>}
-      </motion.div>
-    </motion.main>
+      </div>
+    </main>
   );
 };
 
